@@ -1,0 +1,148 @@
+/* !CUSTOM STYLES ---------------------------------------------------------------*/
+header {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: 
+  color: #d00000;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
+body#home #menu-trigger {
+  display: none;
+}
+
+html, body{
+  margin: 0;
+  height: 100%;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.site-container {
+  height: auto;
+  width: 100% !important;
+  position: absolute;
+}
+
+#home {
+  height: auto;
+  background-color: #fff;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+@font-face {
+    font-family: 'Javacom';
+    src: url('../res/fonts/Javacom.woff2') format('woff2'),
+        url('../res/fonts/Javacom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CF Samurai Bob';
+    src: url('../res/fonts/CFSamuraiBob-Regular.woff2') format('woff2'),
+        url('../res/fonts/CFSamuraiBob-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ebrima';
+    src: url('../res/fonts/Ebrima.woff2') format('woff2'),
+        url('../res/fonts/Ebrima.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+  --primary-font: 'Javacom';
+  --secondary-font: 'CF Samurai Bob';
+  --tertiary-font: 'Ebrima';
+}
+/* !CUSTOM STYLES ---------------------------------------------------------------*/
+
+#panel{
+	background: transparent;
+
+	box-shadow: none;
+}
+
+#contactTitle{
+	position: relative;
+}
+
+#contactTitle h1{
+	font-family: var(--secondary-font);
+	font-style: bold;
+	color: white;
+
+  padding:2vh; 
+
+	font-size: 8vh;
+
+	position: relative; 
+	text-align: center;
+
+	border-bottom: solid;
+	width: 30vw;
+
+  margin: auto;
+}
+
+#contactInfo div{
+  color: white;
+
+	position: relative;
+	text-align: center;
+}
+
+#contactInfo div a{
+  color: white;
+}
+
+#contactInfo div h2{
+	font-family: var(--tertiary-font);
+	font-style: bold;
+	color: white;
+
+	font-size: 4vh;
+}
+
+#contactInfo div div{
+	color: white;
+  font-size: 4vh;
+}
+
+#contactInfo div div a{
+  color: white;
+
+  padding-right: 2.5vw;
+  padding-left: 2.5vw;
+}
+
+#contactInfo div div a:hover{
+	text-decoration-color: transparent; 
+}
+
+@media (max-width: 1200px) {
+  #contactTitle h1{
+    width: 60vw;
+  }
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 800px) {
+  #mainTitle{
+    padding-top: 1.5vh;
+    font-size: 8.5vh;
+  }
+
+  #contactTitle h1{
+    width: 75vw;
+  }
+}

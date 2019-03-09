@@ -1,0 +1,152 @@
+/* !CUSTOM STYLES ---------------------------------------------------------------*/
+header {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: 
+  color: #d00000;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
+body#home #menu-trigger {
+  display: none;
+}
+
+html, body{
+  margin: 0;
+  height: 100%;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.site-container {
+  height: auto;
+  width: 100% !important;
+  position: absolute;
+}
+
+#home {
+  height: auto;
+  background-color: #fff;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+@font-face {
+    font-family: 'Javacom';
+    src: url('../res/fonts/Javacom.woff2') format('woff2'),
+        url('../res/fonts/Javacom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CF Samurai Bob';
+    src: url('../res/fonts/CFSamuraiBob-Regular.woff2') format('woff2'),
+        url('../res/fonts/CFSamuraiBob-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ebrima';
+    src: url('../res/fonts/Ebrima.woff2') format('woff2'),
+        url('../res/fonts/Ebrima.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+  --primary-font: 'Javacom';
+  --secondary-font: 'CF Samurai Bob';
+  --tertiary-font: 'Ebrima';
+}
+/* !CUSTOM STYLES ---------------------------------------------------------------*/
+/*About Styling*/
+#myPic {
+  position: relative;
+
+  height: 100%;
+  
+  background-color: #fff;
+
+}
+
+#myPic img{
+  height: 95%;
+  width: auto;
+
+  margin: 20px 20px 0 20px;
+
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+
+  animation: fadein 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+
+}
+
+@keyframes fadein{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#panel{
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  top: 18vh;
+  bottom: 2.5vh;
+  left: 5vh;
+  right: 5vh;
+
+  background-color: white;
+  z-index: 1;
+
+  box-shadow: -5px 5px 10px black;
+}
+
+
+#aboutMeParagraphs{
+  font-family: var(--tertiary-font);
+  font-size: 25px;
+
+  height: 100%;
+
+  position: relative;
+
+  animation: fadein 4s;
+}
+
+#aboutMeParagraphs div{
+  margin: 2.5vw;
+}
+
+#aboutMeParagraphs div h2{
+  font-family: var(--secondary-font); 
+  font-size: 10vh;
+  text-align: center;
+}
+
+#aboutMeParagraphs div p{
+  background-color: #fff;
+  font-family: var(--tertiary-font);
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 800px) {
+  #mainTitle{
+    font-size: 7.5vh;
+  }
+}

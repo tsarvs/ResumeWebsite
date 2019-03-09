@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tom Sarver | Software Engineer & Developer</title>
+  <link rel="shortcut icon" href="res/favicon.ico">
+  
+  <link rel="stylesheet" href="css/mainStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" type="text/css" href="css/indexStyle.css">
+</head>
+
+<body style="background-color: #000;">
+
+<!-- MENU -->
+  <a name="top"></a>
+    <input type="checkbox" id="menu-trigger">
+      <div class="menu-drawer">
+      	<img src="res/pixel/liquidlight2.gif" id="menuBackground">
+        <div class="menu-inner">
+          <div class="menu-link">
+            <a class="navlink" href="index.html">home</a>
+            <a class="navlink" href="about.html">about</a>
+            <a class="navlink" href="education.html">education</a>
+            <a class="navlink" href="work.html">work</a>
+            <a class="navlink" href="projects.html">projects</a>
+            <a class="navlink" href="hobbies.html">hobbies</a>
+            <a class="navlink" href="contact.html">contact</a>
+          </div>
+        </div>
+      </div>
+    <div class="block"></div>
+  <label for="menu-trigger" class="menu-trigger">
+  				  <span></span>
+  				</label>
+  <div class="hamburger-bg"></div>
+  <!-- End Menu -->
+
+<script src="js/threejs/build/three.js"></script>
+
+    <script src="js/threejs/js/controls/TrackballControls.js"></script>
+    <script src="js/threejs/js/effects/AsciiEffect.js"></script>
+    <script src="js/threejs/js/loaders/STLLoader.js"></script>
+
+    <script src="js/threejs/WebGL.js"></script>
+
+    <div id="title">
+      <h1>Tom Sarver</h1>
+      <h2>Software Engineer and Developer</h2>
+    </div>
+
+    <script>
+      if ( WEBGL.isWebGLAvailable() === false ) {
+        document.body.appendChild( WEBGL.getWebGLErrorMessage() );
+      }
+
+      var camera, scene, renderer, effect;
+      var controls;
+      var sword, plane;
+      var start = Date.now();
+      var rotationAmplitude;
+
+      init();
+      animate();
+
+      function init() {
+        camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 1, 2000 );
+        
+        rotationAmplitude = 550;
+
+        camera.position.x = 0;
+        camera.position.y = 0;
+        camera.position.z = rotationAmplitude;  
+
+        controls = new THREE.TrackballControls( camera );
+
+        scene = new THREE.Scene();
+
+        var light = new THREE.PointLight( 0xffffff );
+        light.position.set( 500, 500, 500 );
+        scene.add( light );
+
+        var light = new THREE.PointLight( 0xffffff, 0.25 );
+        light.position.set( - 500, - 500, - 500 );
+        scene.add( light );
+
+        // Load sword STL file
+        var loader = new THREE.STLLoader();
+        var material = new THREE.MeshPhongMaterial( { color: 0xAAAAAA, specular: 0x111111, shininess: 200 } );
+
+        loader.load( 'js/threejs/models/stl/binary/thinker.stl', function ( geometry ) {
+          var mesh = new THREE.Mesh( geometry, material );
+          mesh.position.set( -100, -215, 90 );
+          mesh.rotation.set( - Math.PI / 2, 0, 0);
+          mesh.scale.set( 2, 2, 2 );
+          mesh.castShadow = true;
+          mesh.receiveShadow = true;
+
+          scene.add( mesh );
+
+        } )
+
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+        effect = new THREE.AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
+        effect.setSize( window.innerWidth, window.innerHeight );
+        effect.domElement.style.color = 'white';
+        effect.domElement.style.backgroundColor = 'black';
+
+        // Special case: append effect.domElement, instead of renderer.domElement.
+        // AsciiEffect creates a custom domElement (a div container) where the ASCII elements are placed.
+        document.body.appendChild( effect.domElement );
+        //
+        window.addEventListener( 'resize', onWindowResize, false );
+      }
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight);
+
+        effect.setSize( window.innerWidth, window.innerHeight);
+      }
+      //
+      function animate() {
+        requestAnimationFrame( animate );
+        render();
+      }
+      function render() {
+        var timer = Date.now() * 0.00065;
+
+        //Allow User scroll
+        rotationAmplitude = Math.sqrt(Math.pow(camera.position.x, 2) + Math.pow(camera.position.z, 2));
+
+        //Zoom in-out
+        //rotationAmplitude = 175*Math.sin(timer*.25) + 550;
+
+        camera.position.x = Math.sin( timer ) * rotationAmplitude;
+        camera.position.z = -Math.cos( timer ) * rotationAmplitude;
+
+        controls.update();
+
+        effect.render( scene, camera );
+      }
+    </script>
+</body>
+</html>

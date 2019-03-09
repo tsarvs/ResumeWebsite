@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tom Sarver | Work</title>
+  <link rel="shortcut icon" href="res/favicon.ico">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  
+  <link href="https://fonts.googleapis.com/css?family=Pirata+One|Press+Start+2P" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+  <script  src="js/sliderScript.js"></script>
+
+  <script type="js/backgroundResize.js"></script>
+
+  <link rel="stylesheet" href="css/mainStyle.css">
+  <link rel="stylesheet" href="css/workStyle.css">
+  <link rel="stylesheet" href="css/sliderStyle.css">
+
+  
+  <style>
+
+  @font-face {
+      font-family: 'Javacom';
+      src: url('../res/fonts/Javacom.woff2') format('woff2'),
+          url('../res/fonts/Javacom.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'CF Samurai Bob';
+      src: url('../res/fonts/CFSamuraiBob-Regular.woff2') format('woff2'),
+          url('../res/fonts/CFSamuraiBob-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+
+
+  :root{
+    --primary-font: 'Javacom';
+    --secondary-font: 'CF Samurai Bob';
+    --tertiary-font: 'Ebrima';
+  }
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+
+
+  h1 {
+    line-height: 50%;
+    font-size: 6vh;
+    font-family: var(--secondary-font);
+
+    margin: 0;
+  }
+
+  section article {
+    position: absolute;
+    bottom: 21vh;
+    text-align: center;
+  }
+
+  section article img{
+    position: absolute;
+    z-index: -1;
+
+    height: 27.5vh;
+    width: auto;
+
+    transform: translate(-50%, -110%);
+  }
+
+  section p{
+    font-size: 2.5vh;
+    font-family: var(--tertiary-font);
+
+    padding: 0;
+    margin-top: 2.5vh;
+  }
+
+  section:nth-child(1) {
+    color: #fff;
+    background-color: transparent;
+  }
+  section:nth-child(2) {
+    color: #fff;
+    background-color: transparent;
+  }
+  section:nth-child(3) {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .parallax-page-scroller {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+  .parallax-page-scroller .parallax-page-scroller__section {
+    position: relative;
+    height: 0;
+    width: 100%;
+    opacity: 0;
+  }
+  .parallax-page-scroller .parallax-page-scroller__section.parallax-page-scroller__section__active {
+    z-index: 10;
+    opacity: 1;
+    height: 100%;
+  }
+  .parallax-page-scroller .parallax-page-scroller__navigation {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    list-style-type: none;
+  }
+  .parallax-page-scroller .parallax-page-scroller__navigation .parallax-page-scroller__navigation__item {
+    display: block;
+    margin: 1rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+  .parallax-page-scroller .parallax-page-scroller__navigation .parallax-page-scroller__navigation__active {
+    background-color: #00ff21;
+  }
+  @media (max-width: 1200px) {
+
+  }
+  @media (max-width: 1024px) {
+
+  }
+  @media (max-width: 800px) {
+    section article img{
+      height: 15vh;
+    }
+    section article {
+      top: 20vh;
+    }
+  }
+  </style>
+</head>
+
+
+<body onresize="resizeFunction()">
+
+<!-- MENU -->
+  <a name="top"></a>
+    <input type="checkbox" id="menu-trigger">
+      <div class="menu-drawer">
+      	<img src="res/pixel/liquidlight2.gif" id="menuBackground">
+        <div class="menu-inner">
+          <div class="menu-link">
+            <a class="navlink" href="index.html">home</a>
+            <a class="navlink" href="about.html">about</a>
+            <a class="navlink" href="education.html">education</a>
+            <a class="navlink" href="work.html">work</a>
+            <a class="navlink" href="projects.html">projects</a>
+            <a class="navlink" href="hobbies.html">hobbies</a>
+            <a class="navlink" href="contact.html">contact</a>
+          </div>
+        </div>
+      </div>
+    <div class="block"></div>
+  <label for="menu-trigger" class="menu-trigger">
+  				  <span></span>
+  				</label>
+  <div class="hamburger-bg"></div>
+  <!-- End Menu -->
+  <img src="res/pixel/jellyfish.gif" id="mainBackground">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+          <H1 id="mainTitle">work</H1>
+      </div>
+    </div>
+    <div class="row" id="panel">
+      <main parallax-page-scroller class="parallax-page-scroller">
+    <section class="parallax-page-scroller__section text-center">
+      <article>
+        <img src="res/work/hchb.png">
+        <div class="jobDescription">
+          <a href="https://hchb.com/">Homecare Homebase</a>
+          <h2>Software Engineer Co-op</h2>
+          <h2>(January 2016 - August 2018)</h2>
+          <p>On and off throughout most of my collegiate career I was co-oping for Homecare Homebase. For a span of two and a half years, I worked for the company for roughly 15 months. While working here, I taught myself how to code in SQL and C# and eventually became comfortable enough to contribute to the development and testing of enterprise-level software while operating under SCRUM and Agile software management methodologies. 
+          <br><br>
+          I initally started at the company with little to no knowledge of how databases work, how enterprise software is developed, or anything in between. Throughout my tenure with the company, however, I not only learned first-hand the ways of professional software development but also I was able to quickly enhance my technical skills in writing clean, testable, and scalable software. Eventually I was able work my way up to making architectural changes to the logic behind the financial software that my team was responsible with developing.</p>
+        </div>
+      </article>
+    </section>
+    <section class="parallax-page-scroller__section">
+      <article>
+        <img src="res/work/UofL.png">
+        <div class="jobDescription">
+          <a href="http://louisville.edu/housing">University of Louisville Campus Housing</a>
+          <h2>Residential Area Technology Specialist (RATS)</h2>
+          <h2>(August 2017 - March 2018)</h2>
+          <p>While working of University of Louisville Campus Housing, I was able to experience how managing and solving technical problems on a large, corporate scale is properly done. As a Technology Specialist, my colleagues and I had a main goal of providing quality technical support to not only dorms and the students in them but also the UofL Campus Housing staff. We were responsible with managing the hardware in the campus dorms as well as throughout the campus housing staff. This included managing and tracking hardware such as laptops, projectors, printers, and everything in between. On top of that I became familiarized with corporate IT software to help clean and format computers. This job greatly enhanced my ability to trobleshoot and problem solve on a technical level, and it has helped me with my other work both on the professional level and scholastic level.</p>
+        </div>
+      </article>
+    </section>
+    <section class="parallax-page-scroller__section">
+      <article>
+        <img src="res/work/tree.png">
+        <div class="jobDescription">
+          <a href="https://www.linkedin.com/in/colette-sommerfeld-3099313a/#experience-section">Summerfields Inc.</a>
+          <h2>Gardener & Handyman</h2>
+          <h2>(June 2015 - January 2019)</h2>
+          <p>While this job does not have much to do with computers or software engineering, I have still learned a lot from working here that I apply to my professional life. First and foremost, this copmany helped me realize my true work potential. Through all of the physical labor on scorching hot summer days with the gardening crew I was apart of, I learned that when I put my head to my work and focus on the task in front of me that I can not only enhance my job performance but also enhance the performance of those around me. I was able to quickly pick up the processes that my boss enforced, and in a short matter of time I was one of the most efficient and productive members of the crew.  </p>
+        </div>
+      </article>
+    </section>
+  </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+/* !CUSTOM STYLES ---------------------------------------------------------------*/
+@font-face {
+    font-family: 'Javacom';
+    src: url('../res/fonts/Javacom.woff2') format('woff2'),
+        url('../res/fonts/Javacom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CF Samurai Bob';
+    src: url('../res/fonts/CFSamuraiBob-Regular.woff2') format('woff2'),
+        url('../res/fonts/CFSamuraiBob-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+  --primary-font: 'Javacom';
+  --secondary-font: 'CF Samurai Bob';
+  --tertiary-font: 'Ebrima';
+}
+/* !CUSTOM STYLES ---------------------------------------------------------------*/
+
+.grid__button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+.grid__button:focus, .grid__button:hover {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.grid {
+  box-sizing: border-box;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-gap: 1vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 25.5vh;
+  }
+  @media (max-width: 1200px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 800px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+.grid__item {
+  box-sizing: border-box;
+  color: #fff;
+  border: solid;
+
+  display: inline-block;
+  height: 25.5vh;
+  margin: 0 10px 10px 0;
+  padding: 20px;
+  position: relative;
+  vertical-align: top;
+  text-align: left;
+  width: calc(20% - 10px);
+
+  overflow-y: auto;
+}
+.grid__item:hover {
+  animation: hoverAnimation 1s forwards;
+}
+@keyframes hoverAnimation {
+  0% {
+    background: transparent;
+  }
+  100% {
+    text-shadow: -5px 5px 10px rgba(48, 48, 48, 0.6);
+    background-color: rgba(225, 225, 225, 0.2);
+    box-shadow: -5px 5px 10px rgba(17, 17, 17, 0.6);
+  }
+}
+
+@supports (display: grid) {
+  .grid__item {
+    margin: 0;
+    width: 100%;
+  }
+}
+.grid__item.active {
+  height: 51vh;
+  width: 100%;
+
+  border: none;
+
+  animation: reveal .2s forwards;
+
+  text-shadow: 0px 0px 10px black;
+}
+
+@keyframes reveal {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background-image: url("../res/pixel/color5.gif");
+    background-size: 200vw 200vh;
+    box-shadow: -5px 5px 10px rgba(17, 17, 17, 0.6);
+  }
+}
+@supports (display: grid) {
+  .grid__item.active {
+    height: auto;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+    width: auto;
+  }
+    @media (max-width: 1200px) {
+    .grid__item.active {
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+    }
+  }
+  @media (max-width: 1024px) {
+    .grid__item.active {
+      grid-column-end: span 2;
+      grid-row-end: span 3;
+    }
+  }
+  @media (max-width: 800px) {
+    .grid__item.active  {
+      grid-column-end: span 2;
+      grid-row-end: span 3;
+    }
+  }
+}
+.grid__title {
+  font-family: var(--secondary-font);
+  font-size: 4vh;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+.grid__content {
+  display: none;
+  font-family: var(--tertiary-font);
+  font-size: 2vh;
+  margin: 10px 0 0;
+  opacity: 0;
+  transition: opacity .3s ease;
+  will-change: opacity;
+}
+.grid__content p{
+  padding-bottom: 10px;
+}
+
+.grid__content button{
+  font-size: 2.5vh;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+
+  color: white;
+
+  border: none;
+
+  background-color: rgba(48, 48, 48, .6);
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.active .grid__content {
+  display: block;
+  opacity: 1;
+}
+.grid__button {
+  height: 20px;
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+}
+.grid__button::before, .grid__button::after {
+  background-color: currentcolor;
+  content: "";
+  display: block;
+  height: 12px;
+  right: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  will-change: transform;
+  width: 2px;
+}
+.grid__button::after {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+}
+.active .grid__button::before {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 800px) {
+  #mainTitle{
+    font-size: 8.5vh;
+    padding-top: 1vh;
+    padding-left: 5vw;
+  }
+
+  .grid__item.active{
+    background-size: 200vw 200vh;
+  }
+}

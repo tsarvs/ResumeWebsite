@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tom Sarver | Education</title>
+  <link rel="shortcut icon" href="res/favicon.ico">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="js/educationScript.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/highstock/2.1.8/highstock-all.js'></script>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/mainStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/educationStyle.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Pirata+One|Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="css/piechartStyle.css">
+</head>
+
+<body>
+
+<!-- MENU -->
+  <a name="top"></a>
+    <input type="checkbox" id="menu-trigger">
+      <div class="menu-drawer">
+      	<img src="res/pixel/liquidlight2.gif" id="menuBackground">
+        <div class="menu-inner">
+          <div class="menu-link">
+            <a class="navlink" href="index.html">home</a>
+            <a class="navlink" href="about.html">about</a>
+            <a class="navlink" href="education.html">education</a>
+            <a class="navlink" href="work.html">work</a>
+            <a class="navlink" href="projects.html">projects</a>
+            <a class="navlink" href="hobbies.html">hobbies</a>
+            <a class="navlink" href="contact.html">contact</a>
+          </div>
+        </div>
+      </div>
+    <div class="block"></div>
+  <label for="menu-trigger" class="menu-trigger">
+  				  <span></span>
+  				</label>
+  <div class="hamburger-bg"></div>
+  <!-- End Menu -->
+
+  <img src="res/pixel/lava.gif" id="pageBackground">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+          <H1 id="mainTitle">education</H1>
+      </div>
+    </div>
+    <div class="row" id="panel">
+      <div class="col-sm-5" >
+        <div id="degreeInfo">
+          <h1>Bachelor of Science in Computer Engineering and Computer Science</h1>
+          <h1>Minor in Mathematics</h1>
+          <h3>Fall 2018 Grade Point Average: 3.4 / 4.0</h3>
+          <h3>Expected Graduation in May 2019</h3>
+          <h1>J.B. Speed School of Engineering at the University of Louisville</h1>
+          <h3>Louisville, Kentucky</h3>
+        </div>
+
+        <div id="resumeDownload">
+          <a href="res/education/ResumeFall2018.pdf" target="_blank"><img src="res/education/document2.png"><br>View Resume</a>
+        </div>
+      </div>
+      <div class="col-sm-7" id="fundamentals">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>CECS Fundamentals</h2>
+            <span id="triangle2"></span>
+            <h1>
+              Artificial Intelligence
+            </h1>
+          </div>
+          <div class="col-sm-4">
+            <h1>
+              Algorithms & Automata Theory
+            </h1>
+          </div>
+          <div class="col-sm-4">
+            <h1>
+              Microcomputer Design & Embedded Systems
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <h1>
+              Object-Oriented Programming & Data Structures
+            </h1>
+          </div>
+          <div class="col-sm-4">
+            <h1>
+              Mobile Application Design
+            </h1>
+          </div>
+          <div class="col-sm-4">
+            <h1>
+              Operating Systems
+            </h1>
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-sm-4">
+            <h1>
+              Database Design
+            </h1>
+          </div>
+          <div class="col-sm-4">
+            <h1>
+              SCRUM & Agile Development
+            </h1>
+          </div>
+          <div class="col-sm-4">
+            <h1>
+              Mathematics
+            </h1>
+          </div>
+        </div>    
+      </div>
+      <div class="col-sm-7" id="programmingSkills">
+        <div id="prorgrammingTitle">
+          <h2>Programming Skills</h2>
+          <div id="triangle1"></div>
+        </div>
+        <div id="wrapper">
+        <div id="q1_2005">
+            <div id="labels">
+              <ul>
+                <li><span></span>C#</li>
+                <li><span></span>SQL</li>
+                <li><span></span>C, C++</li>
+                <li><span></span>Java</li>
+                <li><span></span>Web Dev.</li>
+              </ul>
+            </div>
+
+            <div id="percentage_wrapper">
+              <div id="percentage">
+                <ul>
+                  <li><p>30%</p><p>30%</p><p>30%</p><p>30%</p><p>30%</p><p>30%</p></li>
+                  <li><p>25%</p><p>25%</p><p>25%</p><p>25%</p><p>25%</p><p>25%</p></li>
+                  <li><p>20%</p><p>20%</p><p>20%</p><p>20%</p><p>20%</p><p>20%</p></li>
+                  <li><p>15%</p><p>15%</p><p>15%</p><p>15%</p><p>15%</p><p>15%</p></li>
+                  <li><p>10%</p><p>10%</p><p>10%</p><p>10%</p><p>10%</p><p>10%</p></li>
+                </ul>
+              </div>
+            </div>
+          <div id="slider">
+            <div id="chart_holder">
+              <div id="pie_chart">
+                <ul>
+                  <li id="c1_r"><p><span class="pie_left"></span></p></li>  
+                  <li id="c1_l"><p><span class="pie_right"></span></p></li>
+                  <li id="c2_r"><p><span class="pie_left"></span></p></li>  
+                  <li id="c2_l"><p><span class="pie_right"></span></p></li>
+                  <li id="c3_r"><p><span class="pie_left"></span></p></li>  
+                  <li id="c3_l"><p><span class="pie_right"></span></p></li>
+                  <li id="c4_r"><p><span class="pie_left"></span></p></li>  
+                  <li id="c4_l"><p><span class="pie_right"></span></p></li>
+                  <li id="c5_r"><p><span class="pie_left"></span></p></li>  
+                  <li id="c5_l"><p><span class="pie_right"></span></p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> <!--q1_2005-->
+
+      </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

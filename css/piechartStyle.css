@@ -1,0 +1,219 @@
+
+@font-face {
+    font-family: 'Javacom';
+    src: url('../res/fonts/Javacom.woff2') format('woff2'),
+        url('../res/fonts/Javacom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CF Samurai Bob';
+    src: url('../res/fonts/CFSamuraiBob-Regular.woff2') format('woff2'),
+        url('../res/fonts/CFSamuraiBob-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+  --primary-font: 'Javacom';
+  --secondary-font: 'CF Samurai Bob';
+  --tertiary-font: 'Ebrima';
+}
+/*-----------------------------------------------------------------------*/
+
+#wrapper {
+	position:absolute;
+	top: 95%;
+	left: 50%;
+	width:740px;
+	height:38.75vh;
+	margin: -340px 0 0 -370px;
+	padding: 0;
+}
+
+/* Label and percentage data start */
+#labels {
+	position: absolute;
+	left: 540px;
+	top: 150px;
+	width: 120px;
+
+}
+
+#percentage_wrapper {
+	position: absolute;
+	left: 665px;
+	top: 151px;
+	width: 50px;
+	height: 124px;
+	overflow: hidden;
+}
+	
+#percentage {
+	position: absolute;
+	clip: rect(0px, 50px, 125px, 0px);
+}
+
+#labels ul, #percentage ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-family: var(--tertiary-font);
+	font-size: 12px;
+	color: #fff;
+}
+
+#labels li, #percentage li {
+	display: block;
+	margin: 0;
+	padding: 0 0 8px 0;
+}
+
+#labels span{
+	display: block;
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin: 3px 3px 0 0 ;
+	background: #FFFFFF;
+}
+
+#labels ul :nth-child(1) span{ background: #FDB302; }
+#labels ul :nth-child(2) span{ background: #FC3C13; }
+#labels ul :nth-child(3) span{ background: #FC2223; }
+#labels ul :nth-child(4) span{ background: #B41C59; }
+#labels ul :nth-child(5) span{ background: #7C1E5A; }
+
+#percentage p {
+	display: block;
+	width: 50px;
+	margin: 0;
+	padding: 0 0 8px 0;
+	float: left;
+}
+
+#percentage ul {
+	position: absolute;
+	width: 300px;
+}
+
+#q2_2010:target #percentage ul { left: -0px; }
+#q1_2010:target #percentage ul { left: -50px; }
+#q4_2009:target #percentage ul { left: -100px; }
+#q3_2009:target #percentage ul { left: -150px; }
+#q2_2009:target #percentage ul { left: -200px; }
+#q1_2005:target #percentage ul { left: -250px; }
+/* Label and percentage data end */
+
+/* Slider (contains two chart div) start */
+#slider {
+	width:300px;
+	height: 350px;
+	margin: 0 auto;
+	padding: 0 auto;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+#pie_ico{
+	position: absolute;
+	width: 80px;
+	height: 26px;
+	top: 464px;
+	text-align: center;
+	left: 137px
+}
+
+/* Charts start */
+#chart_holder {
+	width: 600px;
+	height: 350px;
+	margin: 0;
+	padding: 0;
+}
+
+#pie_chart {
+	position: relative;
+	float: left;
+ 	width: 300px;
+ 	height: 300px;
+ 	margin: 0;
+ 	padding: 0;
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.2) ));
+}
+
+#pie_chart ul {
+	list-style-type: none;
+	width: 300px;
+	height: 300px;
+	padding: 0;
+ 	margin: 0;
+}
+	
+#pie_chart li {
+	position: absolute;
+	top: 0px;
+	width: 300px;
+	height: 300px;
+ 	padding: 0;
+ 	margin: 0;
+}
+
+#pie_chart p {
+	width: 300px;
+	height: 300px;
+ 	padding: 0;
+ 	margin: 0;
+}
+
+#pie_chart li p { -webkit-transition: all .7s ease-out;}
+
+#pie_chart span { display: block; width: 150px; height: 300px;}
+
+#pie_chart ul :nth-child(odd) { clip: rect(0px, 300px, 300px, 150px);}
+
+#pie_chart ul :nth-child(even) { clip: rect(0px, 150px, 300px, 0px);}
+
+.pie_left{
+	-moz-border-radius-topleft: 150px;
+	-moz-border-radius-bottomleft: 150px;
+	-webkit-border-top-left-radius: 150px;
+	-webkit-border-bottom-left-radius: 150px;
+	border-top-left-radius: 150px;
+	border-bottom-left-radius: 150px;
+}
+
+.pie_right{
+	margin-left: 150px;
+	-moz-border-radius-topright: 150px;
+	-moz-border-radius-bottomright: 150px;
+	-webkit-border-top-right-radius: 150px;
+	-webkit-border-bottom-right-radius: 150px;
+	border-top-right-radius: 150px;
+	border-bottom-right-radius: 150px;
+}
+
+#c1_l span {background: #7C1E5A;}
+#c1_r span {background: #7C1E5A;}
+#c2_l span {background: #B41C59;}
+#c2_r span {background: #B41C59;}
+#c3_l span {background: #FC2223;}
+#c3_r span {background: #FC2223;}
+#c4_l span {background: #FC3C13;}
+#c4_r span {background: #FC3C13;}
+#c5_l span{background: #FDB302;}
+#c5_r span{background: #FDB302;}
+
+/*Pie chart data (degree value) */
+#pie_chart ul :nth-child(1) p, #q1_2005:target #pie_chart ul :nth-child(1) p{ -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg);}
+#pie_chart ul :nth-child(2) p, #q1_2005:target #pie_chart ul :nth-child(2) p{ -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);}
+#pie_chart ul :nth-child(3) p, #q1_2005:target #pie_chart ul :nth-child(3) p{ -moz-transform: rotate(144deg); -webkit-transform: rotate(144deg); -o-transform: rotate(144deg);}
+#pie_chart ul :nth-child(4) p, #q1_2005:target #pie_chart ul :nth-child(4) p{ -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);}
+#pie_chart ul :nth-child(5) p, #q1_2005:target #pie_chart ul :nth-child(5) p{ -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg);}
+#pie_chart ul :nth-child(6) p, #q1_2005:target #pie_chart ul :nth-child(6) p{ -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);}
+#pie_chart ul :nth-child(7) p, #q1_2005:target #pie_chart ul :nth-child(7) p{ -moz-transform: rotate(18deg); -webkit-transform: rotate(18deg); -o-transform: rotate(18deg);}
+#pie_chart ul :nth-child(8) p, #q1_2005:target #pie_chart ul :nth-child(8) p{ -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -o-transform: rotate(-90deg);}
+#pie_chart ul :nth-child(9) p, #q1_2005:target #pie_chart ul :nth-child(9) p{ -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg);}
+#pie_chart ul :nth-child(10) p, #q1_2005:target #pie_chart ul :nth-child(10) p{ -moz-transform: rotate(108deg); -webkit-transform: rotate(108deg); -o-transform: rotate(108deg);}
+

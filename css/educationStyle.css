@@ -1,0 +1,357 @@
+header {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: 
+  color: #d00000;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
+body#home #menu-trigger {
+  display: none;
+}
+
+html, body{
+  margin: 0;
+  height: 100%;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.site-container {
+  height: auto;
+  width: 100% !important;
+  position: absolute;
+}
+
+#home {
+  height: auto;
+  background-color: #fff;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+@font-face {
+    font-family: 'Javacom';
+    src: url('../res/fonts/Javacom.woff2') format('woff2'),
+        url('../res/fonts/Javacom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CF Samurai Bob';
+    src: url('../res/fonts/CFSamuraiBob-Regular.woff2') format('woff2'),
+        url('../res/fonts/CFSamuraiBob-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+  --primary-font: 'Javacom';
+  --secondary-font: 'CF Samurai Bob';
+  --tertiary-font: 'Ebrima';
+}
+/*-----------------------------------------------------------------------*/
+#panel{
+  overflow-x: auto;
+  overflow-y: auto;
+
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+#degreeInfo{
+  position: relative;
+  margin: 0;
+  text-align: center;
+
+  height: 39.75vh;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: transparent;
+
+  transform: translateY(15%);
+
+  text-shadow: 0px 0px 10px black;
+}
+
+#degreeInfo h1{
+  font-size: 4vh;
+  font-family: var(--secondary-font);
+  color: white;
+  line-height: 3vh;
+}
+
+#degreeInfo h3{
+  font-size: 2.25vh;
+  font-family: var(--tertiary-font);
+  color: white;
+}
+
+#resumeDownload{
+  height: 37vh;
+
+  position: relative;
+  margin: 0;
+  text-align: center;
+  align-content: center;
+
+  background-color: transparent;
+
+  text-shadow: 0px 0px 10px black;
+}
+
+#resumeDownload a{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.5vh;
+
+  font-family: var(--secondary-font);
+  font-size: 6vh;
+  color: white;
+}
+
+#resumeDownload a img{
+  position: relative;
+  top: 2vh;
+
+  height: 15vh;
+
+  -webkit-filter: drop-shadow(0 0 10px rgba(0,0,0,0.75));
+}
+
+
+#programmingSkills{
+  min-height: 350px;
+  height: 39.75vh;
+  background-color: rgba(48, 48, 48, .3);
+
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  z-index: 2;
+}
+
+#prorgrammingTitle h2{
+  position: absolute;
+
+  top: -2vh;
+  
+  font-family: var(--secondary-font);
+  font-size: 3vh;
+  color: white;
+
+  z-index: 4;
+}
+
+#triangle1{
+  position: absolute;
+  
+  left: 0vw;
+  width: 16.5vw;
+      
+  border-top: 5vh solid rgba(37, 37, 37, .5);
+  border-right: 1.5vh solid transparent;
+
+  z-index: 3;
+}
+
+#triangle2{
+  position: absolute;
+  
+  left: 0vw;
+  width: 16.5vw;
+
+  border-top: 5vh solid rgba(78, 78, 78, .5);
+  border-right: 1.5vh solid transparent;
+
+  z-index: 3;
+}
+
+#fundamentals{
+  height: 39.75vh;
+  z-index: 2;
+}
+
+#fundamentals div div{
+  height: 13.25vh;
+  line-height: 13.25vh;
+
+  background-color: #303030;
+
+  border-style: solid;
+  border-color: #474747;
+  border-width: .5px;
+
+  position: relative;
+  text-align: center;
+}
+
+#fundamentals div div h1{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+
+  padding-top: 10px;
+
+  font-family: var(--tertiary-font);
+  font-size: 2vh;
+  color: white;
+}
+
+#fundamentals div div h2{
+  position: absolute;
+  top: -2.5vh;
+
+  font-family: var(--secondary-font);
+  font-size: 3vh;
+  color: white;
+  text-align: left;
+  padding-top: .5vh;
+
+  z-index: 4;
+}
+
+@media (max-width: 1200px) {
+  #degreeInfo{
+    height: 39.75vh;
+    width: 95vw;
+  }
+
+  #resumeDownload{
+    height: 39.75vh;
+    width: 95vw;
+  }
+
+  #programmingSkills {
+    height: 350px;
+    width: 95vw;
+  }
+
+  #fundamentals{
+    height: 60vh;
+    width: 95vw;
+  }
+  #fundamentals div div{
+    height: 20vh;
+  }
+  #fundamentals div div h1{
+   padding-top: 20px;
+   vertical-align: bottom;
+  }
+
+  #triangle1{
+    width: 30vw;
+  }
+
+  #triangle2{
+    width: 30vw;
+  }
+}
+@media (max-width: 1024px) {
+  #degreeInfo{
+    height: 40vh;
+  }
+
+  #resumeDownload{
+    height: 40vh;
+  }
+
+  #programmingSkills {
+    height: 55vh;
+  }
+
+  .educationTitle #triangle1{
+    width: 40vw;
+  }
+
+  #triangle1{
+    width: 40vw;
+  }
+
+  #triangle2{
+    width: 40vw;
+  }
+
+  #fundamentals{
+    height: 50vh;
+    width: 94.5vw;
+  }
+  #fundamentals div div{
+    height: 20vh;
+  }
+  #fundamentals div div h1{
+   padding-top: 20px;
+   vertical-align: bottom;
+  }
+}
+@media (max-width: 800px) {
+  #mainTitle{
+    font-size: 7.5vh;
+    padding-top: 2.5vh;    
+  }
+
+  #panel{
+    top: 18vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #degreeInfo{
+    top: -5vh;
+    padding: 0;
+    height: 45vh;
+    width: 100vw;
+  }
+
+  #resumeDownload{
+    top: -5vh;
+    height: 30vh;
+    width: 100vw;
+  }
+
+  #programmingSkills {
+    height: 65vh;
+    width: 105vw;
+  }
+
+  #prorgrammingTitle h2{
+    width: 57.5vw;
+    padding-left: 2.5vw;
+  }
+
+  #triangle1{
+    width: 60vw;
+  }
+
+  #triangle2{
+    width: 60vw;
+  }
+
+  #fundamentals{
+    height: 135vh;
+    width: 105vw;
+  }
+
+  #fundamentals div div{
+    height: 15vh;
+    line-height: 15vh;
+  }
+
+  #fundamentals div div h1{
+    padding-bottom: 3vh;
+  }
+
+  #fundamentals div div h2{
+    width: 57.5vw;
+    padding-left: 2.5vw;
+  }
+}
+

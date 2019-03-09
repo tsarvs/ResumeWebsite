@@ -1,0 +1,88 @@
+section article img{
+  position: absolute;
+  z-index: -1;
+
+  height: 25vh;
+  width: auto;
+
+  transform: translate(-50%, -125%);
+}
+
+section:nth-child(1) {
+  color: #fff;
+  background-color: transparent;
+}
+
+section:nth-child(2) {
+  color: #fff;
+  background-color: transparent;
+}
+
+section:nth-child(3) {
+  color: #fff;
+  background-color: transparent;
+}
+
+.parallax-page-scroller {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.parallax-page-scroller .parallax-page-scroller__section {
+  position: relative;
+  height: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+.parallax-page-scroller .parallax-page-scroller__section.parallax-page-scroller__section__active {
+  z-index: 10;
+  opacity: 1;
+  height: 100%;
+}
+
+.parallax-page-scroller .parallax-page-scroller__navigation {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style-type: none;
+}
+
+.parallax-page-scroller .parallax-page-scroller__navigation .parallax-page-scroller__navigation__item {
+  display: block;
+  margin: 1rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.parallax-page-scroller .parallax-page-scroller__navigation .parallax-page-scroller__navigation__active {
+  background-color: #F23A55;
+}
+
+#panel{
+  overflow-y: hidden;
+
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 800px) {
+  section article img{
+    height: 10vh;
+  }
+  section article {
+    top: 20vh;
+  }
+}

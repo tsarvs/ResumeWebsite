@@ -1,0 +1,81 @@
+#projects{
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  top: 18vh;
+  bottom: 2.5vh;
+  left: 5vh;
+  right: 5vh;
+
+}
+
+#projects div div{
+  text-align: center;
+  height: 26.5vh;
+
+  position: relative;
+  margin: auto;
+}
+
+#projects div div div{
+  height: 80%;
+  width: 90%;
+
+  background-color: transparent;
+
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+
+  top: 50%;
+  transform: translate(0, -50%);
+
+  border: solid;
+  border-color: white;
+}
+
+#projects div div div:hover{
+  animation: projectHover 1s forwards;
+}
+
+@keyframes projectHover {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #303030;
+    border-color: #303030;
+    box-shadow: 5px 5px 5px black;
+  }
+}
+
+#projects div div div h1{
+  position: relative;
+  padding: 10px;
+
+  top: 35%;
+  transform: translate(0, -50%);
+
+  font-size: 7vh;
+  font-family: var(--secondary-font);
+  color: white;
+}
+
+#projects::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: transparent;
+}
+
+#projects::-webkit-scrollbar
+{
+  height: 5px;
+  width: 5px;
+  background-color: rgba(245, 245, 245, .3);
+}
+
+#projects::-webkit-scrollbar-thumb
+{
+  background-color: #303030;
+}
